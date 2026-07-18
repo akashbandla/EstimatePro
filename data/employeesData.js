@@ -1,36 +1,13 @@
-'use strict'
+'use strict';
 
-// Employees Object
+// --------------- Employees Data -------------------
 const EMPLOYEES_DATA = [
-    {
-    name    : "Satya",
-    salary  : 1500000,
-    experience: 2,
-    projectAllocated: false
-    },
-    {
-    name    : "Rupesh",
-    salary  : 1800000,
-    experience: 1,
-    projectAllocated: false
-    },
-    {
-    name    : "Rupesh",
-    salary  : 1800000,
-    experience: 7,
-    projectAllocated: true,
-    projectCompletionDate: "2026/08/10"
-    },
-    {
-    name    : "Keerthi",
-    salary  : 2800000,
-    experience: 5,
-    projectAllocated: true,
-    projectCompletionDate: "2026/08/20"
-    },
+    { name    : "Satya", salary  : 1500000, experience: 2, track: 'engineering', projectAllocated: false, projectCompletionDate: null },
+    { name    : "Rupesh", salary  : 1800000, experience: 4, track: 'engineering', projectAllocated: false, projectCompletionDate: null },
+    { name    : "Rupesh", salary  : 1800000, experience: 4, track: 'engineering', projectAllocated: true, projectCompletionDate: "2026/08/10" },
+    { name    : "Keerthi", salary  : 2800000, experience: 7, track: 'engineering', projectAllocated: true, projectCompletionDate: "2026/08/20" },
 ];
-
 
 module.exports = {
     EMPLOYEES_DATA,
-}
+};

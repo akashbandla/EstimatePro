@@ -12,13 +12,12 @@ const {
     WORKING_HOURS_PER_DAY
 }= require('../config/constants')
 
-
 /**
- * getHourlySalary function calculates the hourly salary for the gross Annum salary after Applying the TDS
- * @param {*} annualSalary - Employee Gross Annual Salary
- * @returns hourlySalary - After all TDS applies on the Annual Salary
+ * Converts the Annual CTC into a Take-Home Hourly Rate, after deducting income tax + cess and monthly PF/PT
+ * @param { number } annualSalary
+ * @returns { number } hourlySalary 
  */
-function salaryBreakdown(annualSalary){
+function getHourlySalary(annualSalary){
     // Step 1: Taxable Income 
     const taxableIncome = annualSalary - STANDARD_DEDUCTION;
 
@@ -34,8 +33,7 @@ function salaryBreakdown(annualSalary){
     }
 
     // Step 3: Health & Education Cess @ 4%
-    const cess = tax * CHESS_RATE;
-    const totalTax = tax + cess;
+    const totalTax = tax * (1 + CHESS_RATE);
 
     // Step 4: Monthly Tax
     const monthlyTax = totalTax / TOTAL_MONTHS_PER_YEAR;
@@ -53,7 +51,6 @@ function salaryBreakdown(annualSalary){
     return hourlySalary
 }
 
-
 module.exports ={
-    salaryBreakdown
+    getHourlySalary
 }

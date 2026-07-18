@@ -8,27 +8,21 @@ const CHESS_RATE                 = 0.04;
 
 // ------------------ Working Months, Weeks, Days, Hours per Year, Month etc-----------
 const TOTAL_MONTHS_PER_YEAR      = 12;
-
 const WORKING_DAYS_PER_MONTH     = 22;
 const WORKING_DAYS_PER_WEEK      = 5;
-
 const WORKING_HOURS_PER_MONTH    = 176;         // 176 HOURS
 const WORKING_HOURS_PER_DAY      = 8;
 
-
 // --------Project TimeLine (In future, it will dynamically come from other module)-----
 const PROJECT_TIME_LINE          = 2.9;           // 2 MONTHS
-
 
 // ---------------- Salary Ranges for Employees Filter----------------------------------
 const MAX_EMPLOYEE_SALARY        = 2500000;
 const MIN_EMPLOYEE_SALARY        = 600000;
 
-
 // --------------- Experience Ranges for Employee Filter-------------------------------
 const MAX_EMPLOYEE_EXPERIENCE    = 7;
 const MIN_EMPLOYEE_EXPERIENCE    = 3;
-
 
 // --------------------------Tax as per New Regime Slabs--------------------------------
 const TAX_SLABS = [
@@ -40,7 +34,6 @@ const TAX_SLABS = [
     {range:Infinity,taxRate:0.30},      // Slab 6: Above 15,00,000           -> 30% 
 ];
 
-
 // ---------------- Designation levels (by Track & experience, in years) --------------
 const DESIGNATION_LEVELS = [
     { maxExperience: 2, engineering: 'Software Engineer', qa : 'QA 1'},
@@ -48,7 +41,6 @@ const DESIGNATION_LEVELS = [
     { maxExperience: 9, engineering: 'Lead Engineer', qa : 'Lead Engineer'},
     { maxExperience: Infinity, engineering: 'Project Manager', qa : 'Project Manager'},
 ];
-
 
 module.exports = {
     STANDARD_DEDUCTION,
